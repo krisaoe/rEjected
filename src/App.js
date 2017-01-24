@@ -4,7 +4,7 @@ import styles from './App.css';
 import Icon from 'react-icons-kit'
 import { ic_add_a_photo } from 'react-icons-kit/md/ic_add_a_photo'
 import { lock } from 'react-icons-kit/fa/lock'
-import LetterDemo from './LetterDemo'
+import LetterShuffle from './LetterShuffle'
 // import { rocket } from 'react-icons-kit/entypo/rocket'
 
 class App extends Component {
@@ -39,7 +39,7 @@ class App extends Component {
 
           <div className={styles.main}>
             <div className={styles.intro}>
-              <LetterDemo />
+              <LetterShuffle />
             </div>
           </div>
         </div>

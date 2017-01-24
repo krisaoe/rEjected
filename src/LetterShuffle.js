@@ -1,33 +1,43 @@
-import React, { Component } from 'react';
-import random from 'lodash/random';
-import sampleSize from 'lodash/sampleSize';
-import FlipMove from 'react-flip-move';
+import React, { Component } from 'react'
+import random from 'lodash/random'
+import sampleSize from 'lodash/sampleSize'
+import FlipMove from 'react-flip-move'
 
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 function getSubsetOfAlphabet() {
-  const numToPick = random(1, 26);
-  return sampleSize(alphabet, numToPick).sort();
+  const numToPick = random(1, 26)
+  return sampleSize(alphabet, numToPick).sort()
 }
 
-class LetterDemo extends Component {
+class LetterShuffle extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       letters: getSubsetOfAlphabet(),
-    };
+    }
   }
 
   componentWillMount() {
     this.interval = window.setInterval(() => {
       this.setState({
         letters: getSubsetOfAlphabet(),
-      });
-    }, 2000);
+      })
+    }, 2000)
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.interval);
+    window.clearInterval(this.interval)
+  }
+
+  onStart({entering, leaving}, node) {
+    if (entering) {
+      node.classList.add('enter')
+    } else if (leaving) {
+      node.classList.add('leave')
+    } else {
+      node.classList.remove('enter', 'leave')
+    }
   }
 
   renderLetters() {
@@ -60,16 +70,16 @@ class LetterDemo extends Component {
           opacity: 0,
         },
       },
-    };
+    }
 
     return (
       <div className="letter-demo">
-        <FlipMove {...animations}>
+        <FlipMove {...animations} onStart={this.onStart}>
           {this.renderLetters()}
         </FlipMove>
       </div>
-    );
+    )
   }
 }
 
-export default LetterDemo;
+export default LetterShuffle
