@@ -1,0 +1,122 @@
+.app {
+  /*@mixin noSelect;*/
+  @mixin OrbitronFonts 18px; /* mixin with value usage */
+  display: flex;
+  flex-direction: column;
+  background-color: color(#191919 a(95%));
+  width: 100vw;
+  height: 100vh;
+  /*padding: 1px;*/
+  /*padding-left: 5px;*/
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  /*min-height: 60px;*/
+  /*height: 8vh;*/
+  padding: 5px;
+  margin: 0;
+  align-items: center;
+  color: $heading;
+  background: $background;
+  /*border-bottom: $border;*/
+  border: $border;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  /*animation: logo-spin infinite 20s linear;*/
+  width: 100px;
+  margin-left: 10px;
+  /*vertical-align: middle;*/
+  /*display: flex;*/
+  /*margin-left: 20px;*/
+  opacity: .9;
+  /*box-sizing: border-box;*/
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.topNav {
+  flex: 1 1 0px;
+}
+
+.title {
+  margin: 0;
+}
+
+.middle {
+  display: flex;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 86vh;
+}
+
+.side-menu {
+  width: 85px;
+  font-size: 10px;
+  background: $background;
+  /*text-align: center;*/
+  padding: 1rem 0 0 7px;
+  border: $border;
+  /*border-top: $border;*/
+  /*border-right: $border;
+  border-bottom: $border;*/
+  color: color(lime a(80%));
+  box-sizing: border-box;
+}
+
+.menu-toggle {
+  color: $primaryRed;
+  padding-left: 20px;
+  text-decoration: none;
+  &:hover {
+    color: color($primaryRed a(50%));
+  }
+}
+
+.tools {
+  color: $primaryBlue;
+  padding-top: 1.5rem;
+  padding-left: 5px;
+  line-height: 2rem;
+}
+
+.tool:hover {
+  color: color($primaryRed a(50%));
+}
+
+.main {
+  flex: auto;
+  background: $background;
+  margin-left: .7vw;
+  padding-left: 1vw;
+  padding-top: 1vh;
+  border: $border;
+  /*border-top: $border;
+  border-left: $border;
+  border-bottom: $border;*/
+  /*box-sizing: border-box;*/
+}
+
+.intro {
+  color: $primaryRed;
+}
+
+.footer {
+  display: flex;
+  height: 6vh;
+  bottom: 0;
+  align-items: center;
+  color: $primaryRed;
+  border: $border;
+  /*border-top: $border;*/
+  background: $background;
+  box-sizing: border-box;
+  padding-left: 1vw;
+}
