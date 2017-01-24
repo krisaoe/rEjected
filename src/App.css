@@ -104,10 +104,6 @@
   /*box-sizing: border-box;*/
 }
 
-.intro {
-  color: $primaryRed;
-}
-
 .footer {
   display: flex;
   height: 6vh;

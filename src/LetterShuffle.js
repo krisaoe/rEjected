@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import random from 'lodash/random'
 import sampleSize from 'lodash/sampleSize'
 import FlipMove from 'react-flip-move'
+import styles from './LetterShuffle.css'
 
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('')
 
 function getSubsetOfAlphabet() {
-  const numToPick = random(1, 26)
+  const numToPick = random(1, 35)
   return sampleSize(alphabet, numToPick).sort()
 }
 
@@ -23,7 +24,7 @@ class LetterShuffle extends Component {
       this.setState({
         letters: getSubsetOfAlphabet(),
       })
-    }, 2000)
+    }, 1500)
   }
 
   componentWillUnmount() {
@@ -32,11 +33,11 @@ class LetterShuffle extends Component {
 
   onStart({entering, leaving}, node) {
     if (entering) {
-      node.classList.add('enter')
+      node.classList.add(styles.enter);
     } else if (leaving) {
-      node.classList.add('leave')
+      node.classList.add(styles.leave);
     } else {
-      node.classList.remove('enter', 'leave')
+      node.classList.remove(styles.enter, styles.leave);
     }
   }
 
@@ -52,11 +53,11 @@ class LetterShuffle extends Component {
     const animations = {
       enterAnimation: {
         from: {
-          transform: 'translateY(-30px)',
+          transform: 'translateY(-100px) rotate(320deg)',
           opacity: 0,
         },
         to: {
-          transform: 'translateY(0)',
+          transform: 'translateY(0) rotate(0)',
           opacity: 1,
         },
       },
@@ -66,14 +67,14 @@ class LetterShuffle extends Component {
           opacity: 1,
         },
         to: {
-          transform: 'translateY(30px)',
+          transform: 'translateY(100px) rotate(-400deg)',
           opacity: 0,
         },
       },
     }
 
     return (
-      <div className="letter-demo">
+      <div className={styles.letterShuffle}>
         <FlipMove {...animations} onStart={this.onStart}>
           {this.renderLetters()}
         </FlipMove>
