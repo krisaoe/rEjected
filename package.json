@@ -3,6 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
     "autoprefixer": "^6.7.0",
     "babel-core": "6.17.0",
     "babel-eslint": "7.1.1",
@@ -46,6 +48,7 @@
     "react-dev-utils": "^0.4.2",
     "react-icons-kit": "^1.0.3",
     "recursive-readdir": "2.1.0",
+    "storybook-host": "^1.0.13",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
@@ -58,13 +61,16 @@
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
+    "react-anime": "^0.3.4",
     "react-dom": "^15.4.2",
     "react-flip-move": "^2.7.4"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "collectCoverageFrom": [

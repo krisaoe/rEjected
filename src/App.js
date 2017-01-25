@@ -4,7 +4,8 @@ import styles from './App.css';
 import Icon from 'react-icons-kit'
 import { ic_add_a_photo } from 'react-icons-kit/md/ic_add_a_photo'
 import { lock } from 'react-icons-kit/fa/lock'
-import LetterShuffle from './LetterShuffle'
+import LetterShuffle from './LetterShuffle/LetterShuffle'
+import ReactAnime from './Anime/ReactAnime'
 // import { rocket } from 'react-icons-kit/entypo/rocket'
 
 class App extends Component {
@@ -32,13 +33,37 @@ class App extends Component {
             <div><strong>TOOLS</strong><a href="#" className={styles.menuToggle}>▶</a></div>
 
             <div className={styles.tools}>
-              <div><a className={styles.tool}><Icon icon={ic_add_a_photo}/></a></div>
-              <div><a className={styles.tool}><Icon icon={lock}/></a></div>
+              <div><a className={styles.tool}>
+                <Icon icon={ic_add_a_photo}/>
+              </a></div>
+              <div><a className={styles.tool}>
+                <Icon icon={lock}/>
+              </a></div>
+              <div>
+                <a className={styles.tool}>
+                  <Icon icon={lock}/>
+                  lock
+                </a></div>
+              <div><a className={styles.tool}>
+                <Icon icon={lock}/>
+              </a></div>
+              <div><a className={styles.tool}>
+                <Icon icon={lock}/>
+              </a></div>
+              <div><a className={styles.tool}>
+                <Icon icon={lock}/>
+              </a></div>
             </div>
           </div>
 
           <div className={styles.main}>
-            <div className={styles.intro}>
+            <div className={styles.mainTop}>
+              <LetterShuffle />
+            </div>
+            <div className={styles.mainMiddle}>
+              <ReactAnime />
+            </div>
+            <div className={styles.mainBottom}>
               <LetterShuffle />
             </div>
           </div>

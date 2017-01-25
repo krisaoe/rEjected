@@ -1,0 +1,23 @@
+.red {
+  background-color: $primaryBlue;
+}
+
+.green {
+  background-color: color(lime a(85%));
+}
+
+.blue {
+  background-color: $primaryRed;
+}
+
+.yellow {
+  background-color: #FFFF99;
+}
+
+g div {
+  width: 2.5em;
+  height: 2.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 50%;
+}

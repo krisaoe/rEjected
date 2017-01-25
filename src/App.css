@@ -32,6 +32,7 @@
   /*animation: logo-spin infinite 20s linear;*/
   width: 100px;
   margin-left: 10px;
+  /*padding-bottom: -10px;*/
   /*vertical-align: middle;*/
   /*display: flex;*/
   /*margin-left: 20px;*/
@@ -64,7 +65,7 @@
   font-size: 10px;
   background: $background;
   /*text-align: center;*/
-  padding: 1rem 0 0 7px;
+  padding: 2rem 0 0 7px;
   border: $border;
   /*border-top: $border;*/
   /*border-right: $border;
@@ -74,27 +75,51 @@
 }
 
 .menu-toggle {
-  color: $primaryRed;
-  padding-left: 20px;
+  color: color(red a(60%));
+  font-size: 1rem;
+  padding-left: 33px;
+  /*border-left: 1px solid $primaryRed;*/
   text-decoration: none;
   &:hover {
-    color: color($primaryRed a(50%));
+    color: $primaryRed;
   }
 }
 
 .tools {
-  color: $primaryBlue;
-  padding-top: 1.5rem;
-  padding-left: 5px;
+  padding-top: 2rem;
+  /*padding-left: 5px;*/
   line-height: 2rem;
+  align-items: baseline;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tool {
+  height: 20px;
+  width: 60px;
+  margin-bottom: 10px;
+  display: block;
+  background: color($primaryRed a(10%));
+  border: 1px solid $primaryRed;
+  /*align-items: baseline;
+  justify-content: center;
+  vertical-align: middle;*/
+  /*text-align: center;*/
+  vertical-align: bottom;
+  padding-bottom: 4px;
+  padding-left: 4px;
 }
 
 .tool:hover {
-  color: color($primaryRed a(50%));
+  color: lime;
+  background: color($primaryRed a(85%));
+  /*background: color($primaryRed a(60%));*/
 }
 
 .main {
-  opacity: .85;
+  /*opacity: .85;*/
   flex: auto;
   background: $background;
   margin-left: .7vw;
@@ -105,6 +130,19 @@
   border-left: $border;
   border-bottom: $border;*/
   /*box-sizing: border-box;*/
+}
+
+.main-top {
+
+}
+
+.main-middle {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.main-bottom {
+
 }
 
 .footer {
