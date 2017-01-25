@@ -58,13 +58,14 @@ class App extends Component {
 
           <div className={styles.main}>
             <div className={styles.mainTop}>
-              <LetterShuffle />
+              <LetterShuffle font={"Wingdings"} />
             </div>
             <div className={styles.mainMiddle}>
               <ReactAnime />
             </div>
             <div className={styles.mainBottom}>
-              <LetterShuffle />
+              <LetterShuffle font={"Orbitron"} />
+              <LetterShuffle font={"Source Code Pro"} />
             </div>
           </div>
         </div>

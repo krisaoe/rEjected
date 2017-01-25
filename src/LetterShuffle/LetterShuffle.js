@@ -43,7 +43,7 @@ class LetterShuffle extends Component {
 
   renderLetters() {
     return this.state.letters.map(letter => (
-      <span key={letter} style={{display: 'inline-block'}}>
+      <span key={letter} style={{ display: 'inline-block', fontFamily: this.props.font }}>
         {letter}
       </span>
     ))
