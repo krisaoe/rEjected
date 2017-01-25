@@ -3,7 +3,7 @@
   @mixin OrbitronFonts 18px; /* mixin with value usage */
   display: flex;
   flex-direction: column;
-  background-color: color(#191919 a(95%));
+  background-color: $darkBg;
   padding-top: 2px;
   padding-bottom: 2px;
   width: 100vw;
@@ -21,8 +21,8 @@
   /*padding: 5px;*/
   margin: 0;
   align-items: center;
-  color: $heading;
-  background: $background;
+  color: $lightText;
+  /*background: $lightBg;*/
   /*border-bottom: $border;*/
   border: $border;
   box-sizing: border-box;
@@ -63,25 +63,25 @@
 .side-menu {
   width: 85px;
   font-size: 10px;
-  background: $background;
+  /*background: $background;*/
   /*text-align: center;*/
   padding: 2rem 0 0 7px;
   border: $border;
   /*border-top: $border;*/
   /*border-right: $border;
   border-bottom: $border;*/
-  color: color(lime a(80%));
+  color: $lightText;
   box-sizing: border-box;
 }
 
 .menu-toggle {
-  color: color(red a(60%));
+  color: $highlight;
   font-size: 1rem;
   padding-left: 33px;
   /*border-left: 1px solid $primaryRed;*/
   text-decoration: none;
   &:hover {
-    color: $primaryRed;
+    color: $lightText;
   }
 }
 
@@ -101,8 +101,8 @@
   width: 60px;
   margin-bottom: 10px;
   display: block;
-  background: color($primaryRed a(10%));
-  border: 1px solid $primaryRed;
+  background: $lightBg;
+  border: 1px solid $lightText;
   /*align-items: baseline;
   justify-content: center;
   vertical-align: middle;*/
@@ -113,19 +113,21 @@
 }
 
 .tool:hover {
-  color: lime;
-  background: color($primaryRed a(85%));
+  color: $highlight;
+  background: $lightText;
+  border-color: $lightBg;
   /*background: color($primaryRed a(60%));*/
 }
 
 .main {
   /*opacity: .85;*/
   flex: auto;
-  background: $background;
+  /*background: $background;*/
   margin-left: .7vw;
   padding-left: 1vw;
-  padding-top: 1vh;
+  padding-top: 8vh;
   border: $border;
+  text-align: center;
   /*border-top: $border;
   border-left: $border;
   border-bottom: $border;*/
@@ -147,13 +149,15 @@
 
 .footer {
   display: flex;
+  justify-content: space-between;
   height: 6vh;
   bottom: 0;
   align-items: center;
-  color: $primaryRed;
+  color: $lightText;
   border: $border;
   /*border-top: $border;*/
-  background: $background;
+  /*background: $background;*/
   box-sizing: border-box;
   padding-left: 1vw;
+  padding-right: 1vw;
 }

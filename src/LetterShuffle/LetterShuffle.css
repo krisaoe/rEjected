@@ -1,5 +1,5 @@
 .letter-shuffle {
-  color: color(lime a(85%));
+  color: $highlight;
 
   span {
     display: inline-block;
@@ -10,10 +10,10 @@
   }
 
   .enter {
-    color: $primaryBlue;
+    color: $darkText;
   }
 
   .leave {
-    color: $primaryRed;
+    color: $lightText;
   }
 }

@@ -71,7 +71,9 @@ class App extends Component {
         </div>
 
         <footer className={styles.footer}>
-          footer
+          <div className={styles.footerLeft}>footer</div>
+          <div className={styles.footerMid}>sensiblemedia © 2017</div>
+          <div className={styles.footerRight}>contact</div>
         </footer>
 
       </div>

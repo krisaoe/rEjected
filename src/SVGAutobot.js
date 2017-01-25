@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SVGAutobot({ size=40, fill='#00beff', viewSize=360 }) {
+export default function SVGAutobot({ size=40, fill='#fff', viewSize=360 }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={`${size}px`} height={`${size}px`} viewBox={`0 0 ${viewSize} ${viewSize}`} fill={fill}>
       {/* <g fill={props.fill || "red"}> */}

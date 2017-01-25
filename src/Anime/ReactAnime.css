@@ -1,13 +1,13 @@
 .red {
-  background-color: $primaryBlue;
+  background-color: $lightText;
 }
 
 .green {
-  background-color: color(lime a(85%));
+  background-color: $highlight;
 }
 
 .blue {
-  background-color: $primaryRed;
+  background-color: $darkText;
 }
 
 .yellow {
@@ -20,4 +20,5 @@ g div {
   margin-top: auto;
   margin-bottom: auto;
   border-radius: 50%;
+  margin-left: 42.5%;
 }
